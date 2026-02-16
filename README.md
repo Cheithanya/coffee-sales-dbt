@@ -1,7 +1,9 @@
 # Coffee Sales Analytics - GCP + dbt
 
 ## Overview
-End-to-end Analytics engineering project using Google Bigquery and dbt. Raw coffee sales data is transformed into analytics-ready datasets with testing, documentation, incremental models, snapshots, and CI/CD.
+End-to-end Analytics engineering project using Google Bigquery and dbt. 
+Raw coffee sales data is transformed into analytics-ready datasets with testing, 
+documentation, incremental models, snapshots, and CI/CD.
 
 ## Architecture
 CSV -> GCS -> BigQuery(raw)
