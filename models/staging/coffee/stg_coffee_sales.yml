@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: stg_coffee_sales
+    columns:
+      - name: sale_date
+        tests:
+          - not_null
+
+      - name: amount
+        tests:
+          - not_null
+
+      - name: coffee_name
+        tests:
+          - not_null

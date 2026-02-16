@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: coffee_raw
+    database: dbt-hands-on-project   # your GCP project id
+    schema: coffee_raw             # BigQuery dataset
+    tables:
+      - name: coffee_sales_raw
