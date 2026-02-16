@@ -1,15 +1,37 @@
-Welcome to your new dbt project!
+# Coffee Sales Analytics - GCP + dbt
 
-### Using the starter project
+## Overview
+End-to-end Analytics engineering project using Google Bigquery and dbt. Raw coffee sales data is transformed into analytics-ready datasets with testing, documentation, incremental models, snapshots, and CI/CD.
 
-Try running the following commands:
-- dbt run
-- dbt test
+## Architecture
+CSV -> GCS -> BigQuery(raw)
+-> dbt (staging + marts)
+-> BI - ready tables
 
+## Tech Stack
+- GCP (GSC + BigQuery)
+- dbt core
+- SQL
+- GitHub Actions (CI/CD)
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+## Data Models
+- **stg_coffee_sales** - cleaned and standardized data
+- **coffee_daily_sales** - daily revenue and order metrics
+- **coffee_product_sales** - product-level performance
+- **Incremental models** with partioning
+- **Snapshots** for historical tracking
+
+## Data Quality
+- dbt tests (not_null)
+- Source definitions
+- Documentation & lineage graphs
+
+## CI/CD
+- Automated dbt tests using GitHub Actions
+- Validates models on every push and PR
+
+## How to run locally
+-- bash
+dbt run
+dbt test
+dbt docs serve
